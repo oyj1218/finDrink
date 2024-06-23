@@ -1,0 +1,226 @@
+
+body {
+    position: relative;
+}
+body::before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.container {
+    position: relative;
+    font-family: "Nanum Myeongjo", serif;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+#header{
+    position: relative;
+    background-color: #BFB195;
+    display:grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    position: sticky;
+    top:0;
+    border-bottom: 1px solid black;
+}
+.header__left img{
+    width:15%;
+}
+.header__navs{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+    height:100%;
+ 
+}
+.nav{
+    display:flex;
+    height: 100%;
+    width:100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+    border-left: 1px solid black;
+}
+.nav:nth-of-type(4){
+    border-right: 1px solid black;
+}
+.header__right{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.header__login, .header__signup{
+    font-size: x-large;
+    border-radius: 30px;
+    margin:3%;
+    padding:3% 6%;
+}
+.header__login{
+    background-color: white;
+}
+.header__signup{
+    background-color: black;
+    color:white;
+}
+.container{
+    background-color: #fffaef;
+    width: 1440px;
+    margin:auto;
+    position: relative;
+}
+
+#title{
+    font-size: 40px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.main{
+    flex-basis: 50%;
+    display: flex;
+    height:300px;
+    
+}
+
+.pre{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.pre button{
+    font-size: 50px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.next{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.next button{
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#store{
+    /* margin-right: 50px; */
+    margin-top: 40px;
+    font-size: 20px;
+
+}
+
+
+.footer{
+    flex-basis: 40%;
+}
+
+#title2{
+    height: 100px;
+    font-size: 40px;
+    padding: 20px;
+    /* margin-top: 100px; */
+    margin-top: 80px;
+}
+
+.menuchoice{
+    display: flex;
+    /* height: 520px; */
+    
+}
+
+
+
+
+.choice{
+    display: flex;
+    font-size: 30px;
+    width: 1000px;
+    
+}
+
+.choice ul{
+    font-size: 40px;
+}
+
+#choice1{
+    padding: 25px;
+    margin-left: 40px;
+}
+
+#choice1 input{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#choice1 li{
+    padding: 20px;
+}
+
+#choice2{
+    padding: 25px;
+    margin-left: 30px;
+}
+
+#choice2 input{
+    width: 200px;
+    height: 40px;
+}
+
+
+#choice2 li{
+    padding: 20px;
+}
+
+
+#choice2 button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.point{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    /* margin-left: 50px; */
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    /* padding: 100px; */
+    margin-left: 50px;
+}
+

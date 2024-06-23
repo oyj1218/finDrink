@@ -1,0 +1,39 @@
+.box{
+  margin: 0 auto; /**중앙 정렬한다.**/
+}
+
+/**사진**/
+.slide{ /**이만큼의 크기로 보이겠다는 의미**/
+ /**사진보다 크면 다음 사진까지 표시되어 img와 slide크기를 맞춘다.**/
+  overflow: hidden;/**이미지는 내장이라 overflow:hidden을 사용해 넘친 사진들을 안보이게 한다.**/
+}
+.images{
+  display: flex; /**좌우 슬라이드를 위해 flex로 사진을 가로정렬한다.**/
+  transition: transform 0.5s;
+}
+
+/**버튼위치**/
+.back{
+  position:relative;
+  bottom: 5%; left: 40%;
+}
+.next{
+  position:relative;
+  bottom: 5%; left: 50%;
+}
+
+/**버튼디자인**/
+button{
+  width: 50px; height: 50px;
+  background-color: rgb(200, 239, 255);
+  border-radius: 30px;
+  border : transparent;
+  color:black;
+  cursor: pointer;
+}
+button:active{/**버튼을 클릭하는 동안 색을 바꾼다.**/
+  background-color:#679cff;
+}
+button:disabled{/**버튼 속성이 disabled되면 색을 바꾼다.**/
+    background-color: rgb(200, 239, 255);
+}

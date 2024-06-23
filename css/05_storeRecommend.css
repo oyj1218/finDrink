@@ -1,0 +1,196 @@
+/* div{ border:1px solid black;} */
+body {
+    position: relative;
+}
+body::before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+#header{
+    position: relative;
+    background-color: #BFB195;
+    display:grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    position: sticky;
+    top:0;
+    border-bottom: 1px solid black;
+}
+.header__left img{
+    width:15%;
+}
+.header__navs{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+    height:100%;
+ 
+}
+.nav{
+    display:flex;
+    height: 100%;
+    width:100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+    border-left: 1px solid black;
+}
+.nav:nth-of-type(4){
+    border-right: 1px solid black;
+}
+.header__right{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.header__login, .header__signup{
+    font-size: x-large;
+    border-radius: 30px;
+    margin:3%;
+    padding:3% 6%;
+}
+.header__login{
+    background-color: white;
+}
+.header__signup{
+    background-color: black;
+    color:white;
+}
+
+
+
+.store-image{
+    display:flex;
+    align-items: center;
+    height: 280px;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+}
+
+.store-image > img{
+    width: 400px;
+    height: 240px;
+}
+
+.store-info{
+    margin:0px 40px
+}
+
+.reviews > ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reviews > ul li{
+    list-style: none;
+}
+
+.review{
+    width: 1140px;
+    height: 200px;
+}
+
+.review-header{
+    height: 30%;
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+
+.review-header > .s{
+    margin-left:20px;
+}
+
+.reviews-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.reviews-top > div {
+    display: flex;
+    align-items: center;
+}
+
+.reviews-top > div img{
+    margin: 0px 20px;
+}
+
+.review{
+    border-bottom:1px solid black;
+}
+.review > .content{
+    height: 70%;
+}
+
+.review > .review-header > .user img{
+    width: 64px;
+}
+
+.review > .review-header > .f > a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.s{
+    display: flex;
+    align-items: center;
+}
+
+.review > .content{
+    display: flex;
+}
+
+.review > .content > .f{
+    width: 20%;
+}
+
+.review > .content > .s{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.review > .content > .s > .content-letter{
+    width: 100%;
+    height: 200px;
+}
+.review > .content > .s > .comment-like{
+    width: 100%;
+    height: 40px;
+}
+
+.comment-like{
+    display: flex;
+    justify-content: flex-end;
+}

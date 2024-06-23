@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_alcoholRecommend</title>
+
+    <link rel="stylesheet" href="../css/07_alcoholRecommend.css">
+    <link rel="stylesheet" href="util.css">
+
+    <script src="https://kit.fontawesome.com/8b9b41006c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="header__left">
+            <a href="01_landiingPage.html"><img class="logo__img" src="../image/findrink2.png" alt="logo"></a>
+        </div>
+            <ul class="header__navs">
+                <li class="nav"><a href="05_storeRecommend.html">매장</a></li>
+                <li class="nav"><a href="06-1_storeReview.html">평가</a></li>
+                <li class="nav"><a href="07_alcoholRecommend.html">추천</a></li>
+                <li class="nav"><a href="08_storeRanking.html">랭킹</a></li>
+            </ul>
+        <div class="header__right">
+            <a href="02_login.html" class="header__login">Log In</a>
+            <a href="03_signup.html" class="header__signup">Sign Up</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="recommend">
+            <div class="title">
+                <a href=""><img src="../image/findrink.png" height="80px"></a>
+                <span><strong>오늘의 술 | TODAY'S DRINK</strong></span>
+            </div>
+            <div class="category">
+                <form action="">
+                    <div class="selector-wrap">
+                        <div class="selector-card">
+                            <label><input type="radio" name="category" id="c-level1">위스키</label>
+                            <label><input type="radio" name="category" id="c-level2">와인</label>
+                            <label><input type="radio" name="category" id="c-level3">맥주</label>
+                            <label><input type="radio" name="category" id="c-level4">기타주류</label>
+                        </div>
+                        <div class="selector-card">
+                            <label><input type="radio" name="alcohol" id="a-level1">낮음</label>
+                            <label><input type="radio" name="alcohol" id="a-level2">중간</label>
+                            <label><input type="radio" name="alcohol" id="a-level3">높음</label>
+                            <label><input type="radio" name="alcohol" id="a-level4">강함</label>
+                        </div>
+                        <div class="selector-card">
+                            <label><input type="radio" name="price" id="p-level1">낮음</label>
+                            <label><input type="radio" name="price" id="p-level2">가성비</label>
+                            <label><input type="radio" name="price" id="p-level3">높음</label>
+                            <label><input type="radio" name="price" id="p-level4">매우높음</label>
+                        </div>
+                    </div>
+                    <button>추천</button>
+                </form>
+            </div>
+        </div>
+        <div class="recommended">
+            <div class="m">
+                <div class="l">
+                    <img src="../image/pngwing.com (2).png">
+                </div>
+                <div class="column-line"></div>
+                <div class="r">
+                    <div class="f">
+                        <p>liquid-name</p>
+                        <span>rating</span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>price : 40,000</p>
+                    </div>
+                    <div class="s">
+                        <p>
+                            스코틀랜드 하이랜드의 중심부, 구릉과 안개가 자욱한 협곡 사이에 자리 잡은 진정한 장인 정신과 헌신의 장소가 있습니다. 바로 발베니 증류소입니다. 이곳에서 장인
+                            정신이 번성했고, 이 지역에서 유일하게 위스키 제조의 5대 희귀 기술(Five Rare Crafts)을 자랑스럽게 지켜온 증류소이었습니다. 이러한 헌신은 단순한
+                            전통이 아니라 이곳에서 생산되는 황금빛 위스키 한 방울에 귀중한 기술, 지식, 경험, 열정을 불어넣는 삶의 방식이었습니다.
+                            발베니의 중심에는 증류소를 둘러싸고 흐르는 시냇물만큼이나 깊은 인연을 맺은 헌신적인 장인들이 있었습니다. 이들은 오직 위스키를 만드는 사람들만이 아니라 예술가,
+                            과학자, 스토리텔러가 모두 한데 어우러진 사람들이었습니다. 이들은 매일 스코틀랜드의 태양이나 날씨에 따라 안개가 자욱하게 드리워진 곳에서 모여 여러 세대에 걸쳐
+                            이어져 온 유산을 계승했습니다. 발베니 위스키 여정은 보리에서 시작되었으며, 이곳에서 첫 번째 위스키가 탄생했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flavor">
+                <div class="taste">
+                    <ul>
+                        <li class="circle-card"><img src="../image/appleFlavor-removebg-preview.png" width="70px"></li>
+                        <li class="circle-card"><img src="../image/chocolateFlavor-removebg-preview.png" width="90px"></li>
+                        <li class="circle-card"><img src="../image/orangeFlavor-removebg-preview.png" width="80px"></li>
+                    </ul>
+                </div>
+                <div class="scent">
+                    <ul>
+                        <li class="circle-card"><img src="../image/coffeeFlavor-removebg-preview.png" width="120px"></li>
+                        <li class="circle-card"><img src="../image/coconutFlavor-removebg-preview.png" width="100px"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="similar">
+                <a href="" class="card">
+                    <img src="../image/pngwing.com (5).png">
+                    <p>술이름</p>
+                </a>
+                <div class="column-line"></div>
+                <a href="" class="card">
+                    <img src="../image/pngwing.com (3).png">
+                    <p>술이름</p>
+                </a>
+                <div class="column-line"></div>
+                <a href="" class="card">
+                    <img src="../image/pngwing.com (5).png">
+                    <p>술이름</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/07_alcoholRecommend.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+.circle-card-border{
+    border: 1px solid black;
+    width: 120px;
+    height: 120px;
+    background-color: none;
+}
+
+.circle-card{
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    background-color: lightgray;
+    
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    border-radius: 50%;
+}
+
+.column-line{
+    border: 1px solid black;
+    height: 320px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selector-card{
+    height: 100px;
+    width: 1140px;
+    display: flex;
+    justify-content: space-around;
+}
