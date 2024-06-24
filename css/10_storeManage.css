@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 body {
     position: relative;
+    font-family: 'ChousunGu';
 }
 body::before {
     content: "";
@@ -14,7 +23,8 @@ body::before {
 }
 .container {
     position: relative;
-    font-family: "Nanum Myeongjo", serif;
+    /* font-family: "Nanum Myeongjo", serif; */
+    font-family: 'ChosunGu';
     background-color: #fffaef;
     margin-left: auto;
     margin-right: auto;
@@ -69,16 +79,17 @@ li{
     align-items: center;
     justify-content: center;
 }
-.header__login, .header__signup{
+.header__mypage, .header__logout{
     font-size: x-large;
     border-radius: 30px;
     margin:3%;
     padding:3% 6%;
+    font-family: 'Comfortaa';
 }
-.header__login{
+.header__mypage{
     background-color: white;
 }
-.header__signup{
+.header__logout{
     background-color: black;
     color:white;
 }
@@ -101,6 +112,7 @@ li{
     height:300px;
     
 }
+
 
 .pre{
     display: flex;

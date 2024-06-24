@@ -1,6 +1,15 @@
 /* div{ border: 1px solid black;} */
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     position: relative;
+    font-family: 'ChosunGu';
 }
 body::before {
     content: "";
@@ -14,7 +23,8 @@ body::before {
 }
 .container {
     position: relative;
-    font-family: "Nanum Myeongjo", serif;
+    /* font-family: "Nanum Myeongjo", serif; */
+    font-family: 'ChosunGu';
     background-color: #fffaef;
     margin-left: auto;
     margin-right: auto;
