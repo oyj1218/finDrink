@@ -6,5 +6,12 @@
 <br><br>
 주로 프론트엔드 위주로 작업했으며 백엔드는 커뮤니티 게시판을 작업했습니다.
 
-> github에선 동적 웹페이지 배포하지 못해 index.html만 변경 후 배포했습니다(디자인 확인)
+## finDrink 요구사항
+https://docs.google.com/spreadsheets/d/1T6Ee6SXLTywe34F8RhtdWTpSQ4B7IJ7zmXGsOBEXu8g/edit?usp=sharing
+
+## finDrink 피그마
+https://www.figma.com/design/lVAlLEsWYMmxA6Yg33DyD4/Wireframing-in-Figma?node-id=0-1&p=f
+
+
+> github에선 동적 웹페이지 배포하지 못해 코드만 올렸습니다.
 
