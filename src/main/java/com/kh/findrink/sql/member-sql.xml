@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>member-sql.xml</comment>
+	
+	<entry key = "signUp">
+		INSERT INTO MEMBER VALUES
+		(SEQ_MEMBER_NO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, NULL, ?, DEFAULT)
+	</entry>
+	
+	<entry key = "login">
+		SELECT MEMBER_NO, MEMBER_ID, MEMBER_NM, MEMBER_TEL, MEMBER_NICK, MEMBER_EMAIL, MEMBER_INT, MEMBER_CATEGORY, 
+		TO_CHAR(ENROLL_DT, 'YYYY-MM-DD HH24:MI:SS') AS ENROLL_DT, MEMBER_IMG
+		FROM MEMBER
+		WHERE MEMBER_ID = ?
+		AND MEMBER_PW = ?
+		AND SECESSION_FL = 'N'
+	</entry>
+	
+	<entry key = "selectPw">
+		SELECT MEMBER_PW FROM MEMBER WHERE MEMBER_ID = ?
+	</entry>
+	
+	<entry key = "selectSalt">
+		SELECT SALT FROM MEMBER WHERE MEMBER_ID = ?
+	</entry>
+	
+	<entry key ="idDupCheck">
+		SELECT COUNT(*) FROM MEMBER WHERE MEMBER_ID = ? 
+	</entry>
+	
+	<entry key = "nicknameDupCheck" >
+		SELECT COUNT(*) FROM MEMBER WHERE MEMBER_NICK = ?
+	</entry>
+	
+	
+	<entry key = "secession" >
+		UPDATE MEMBER SET SECESSION_FL = 'Y' WHERE MEMBER_NO = ? AND MEMBER_PW = ?
+	</entry>
+	
+</properties>

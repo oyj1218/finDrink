@@ -1,0 +1,128 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+body:before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+} 
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 500px 940px;
+    background-color: #FFFAEF;
+}
+/* 왼쪽 */
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    padding-bottom: 600px;
+    padding-top: 100px;
+}
+
+/* 로고 */
+.section1-logo{
+    width: 360px;
+    margin: 40px 0px;
+
+}
+/* 프로필 사진 */
+.section1-profile{
+    width: 350px;
+    height: 350px;
+    margin: 40px 0px;
+    border-radius: 50%;
+}
+/* 내정보, 리뷰조회, 매장관리, 로그아웃*/
+/* 내정보, 리뷰괸리, 커뮤니티 관리, 로그아웃  */
+.section1 li{
+    font-size: 30px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    padding: 40px;
+    text-align: center;
+
+}
+.section1 li:hover{
+    background-color: #6B8E8B;
+    cursor: pointer;
+
+}
+.section1 li:nth-of-type(1){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(2){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(4){
+    border-top: 1px solid black;
+}
+
+
+/* 오른쪽 */
+.section2, #section2{
+	position: relative;
+}
+/* 오른쪽 사진 */
+.section2 img, #section2 img{
+    width: 942px;
+    height:704px;
+}
+/* 반갑습니다 */
+.section2 h1, #section2 h1{
+    margin-top: 260px;
+    border-bottom: 1px solid black;
+    font-size: 40px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    padding: 30px 30px 30px 130px;
+    width: 750px;
+
+}
+/* 한줄소개 */
+.section2 p, #section2 p{
+    font-size: 24px;
+    font-family: "Wanted Sans";
+    font-weight: bold;
+    padding: 100px;
+    margin-top: 340px;
+}
+

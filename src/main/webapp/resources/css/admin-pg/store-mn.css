@@ -1,0 +1,155 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+body:before {
+    content: "";
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    background-repeat: repeat-y;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 60%);
+    padding-bottom: 100px;    
+
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+.main-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+    border-right: 1px solid black;
+}
+
+.main-1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: "Wanted Sans";
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.main-1 a:hover{
+    background-color: #ddd;
+}
+
+.main-2{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.main-2>div:nth-of-type(1){
+    position: relative;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.main-2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: "Wanted Sans";
+    background-color: #bbbbbb;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 20px 5px 5px;
+}
+
+/* search */
+.search{
+    margin: 5px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.search form{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.search p{
+    margin-right: 10px;
+}
+
+.search fieldset{
+    display: flex;
+    border: none;
+}
+
+.search input{
+    background-color: #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.search input:focus{
+    background-color: white;
+}
+
+.search button{
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background-color: black;
+}
+
+/* list */
+.search>div:nth-of-type(1){
+    font-weight: bold;
+}
+
+.list form{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin: 16px 0;
+    padding: 13px 5px;
+}
+
+.title form{
+    background-color: rgba(218, 218, 218, 0.8);
+}
+
+p{
+    display: inline-block;
+    text-align: center;
+}

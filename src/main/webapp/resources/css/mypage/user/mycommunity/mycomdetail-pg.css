@@ -1,0 +1,188 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFAEF;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+
+body {
+    position: relative;
+}
+
+body:before {
+    content: "";
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    background-repeat: repeat-y;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+}
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+
+.main-2{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    margin: 0px 40px 0px 40px;
+    padding: 90px 0px;
+}
+
+.main-2>div:nth-of-type(1){
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.main-2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: "Wanted Sans";
+    background-color: #bbbbbb;
+    padding: 5px 20px 5px 5px;
+    width: 180px
+
+}
+
+/* search */
+.search{
+    margin: 5px 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search form{
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+    margin: 10px 0;
+}
+
+.search p{
+    margin-right: 10px;
+}
+
+.search fieldset{
+    display: flex;
+    border: none;
+}
+
+.search input{
+    background-color: #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.search input:focus{
+    background-color: white;
+}
+
+.search button{
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background-color: black;
+}
+
+/* list */
+.search>div:nth-of-type(1){
+    font-weight: bold;
+}
+
+#main2-order{
+    margin-left: 100px;
+    border: transparent;
+    padding: 1px 20px;
+
+    margin: 0px 30px;
+}
+
+.list form{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 16px 40px;
+}
+
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    background-color: transparent;
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+
+    font-weight: bold;;
+}
+
+.section1{
+    margin: 0px 40px 0px 90px;
+}
+.section1 h2, .section1 p{
+    border-bottom: 1px dashed black;
+    margin: 100px 0px;
+}
+.section1-btn{
+    padding-bottom: 40px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: end;
+
+}
+.update-btn, .delete-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    padding: 0px 16px;
+}
+.update-btn:hover, .delete-btn:hover{
+    color:#acbdbc;
+}

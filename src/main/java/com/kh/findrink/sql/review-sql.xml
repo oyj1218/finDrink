@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>review-sql.xml</comment>
+	
+	<entry key = "countReview">
+		SELECT COUNT(*) FROM BOARD
+		WHERE BOARD_CD = 1
+		AND BOARD_ST = 'N'
+	</entry>
+	
+	<entry key="countReviewMember">
+		SELECT COUNT(*) FROM BOARD WHERE BOARD_CD = 1 AND BOARD_ST = 'N' AND MEMBER_NO = ?
+	</entry>
+	
+	<entry key="getReivewCountStore">
+		SELECT COUNT(*) FROM BOARD WHERE BOARD_CD = 1 AND BOARD_ST = 'N' AND STORE_NO = ?
+	</entry>
+	
+	<entry key = "selectReviewList">
+		SELECT * FROM(
+		    SELECT ROWNUM RNUM, A.* FROM(
+		        SELECT  BOARD_NO, BOARD_TITLE, MEMBER_NICK, MEMBER_IMG, MEMBER_NO,
+		                TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT,
+            	        (SELECT IMG_RENAME FROM BOARD_IMG WHERE IMG_LEVEL = 0
+            	         AND BOARD_IMG.BOARD_NO = BOARD.BOARD_NO) AS THUMBNAIL,
+            	        (SELECT COUNT(*) FROM HEART WHERE BOARD_NO = BOARD.BOARD_NO ) AS HEART_COUNT,
+            	        (SELECT COUNT(*) FROM REPLY WHERE BOARD_NO = BOARD.BOARD_NO ) AS REPLY_COUNT
+		        FROM BOARD
+		        JOIN MEMBER USING(MEMBER_NO)
+		        WHERE BOARD_CD = 1
+		        AND BOARD_ST = 'N'
+		        ORDER BY BOARD_NO DESC
+		    ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	
+	</entry>
+	
+	<entry key="selectReviewWithMember">
+		SELECT * FROM(
+		    SELECT ROWNUM RNUM, A.* FROM(
+		        SELECT  BOARD_NO, BOARD_TITLE, MEMBER_NICK, MEMBER_IMG, MEMBER_NO,
+		                TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT,
+            	        (SELECT IMG_RENAME FROM BOARD_IMG WHERE IMG_LEVEL = 0
+            	         AND BOARD_IMG.BOARD_NO = BOARD.BOARD_NO) AS THUMBNAIL,
+            	        (SELECT COUNT(*) FROM HEART WHERE BOARD_NO = BOARD.BOARD_NO ) AS HEART_COUNT,
+            	        (SELECT COUNT(*) FROM REPLY WHERE BOARD_NO = BOARD.BOARD_NO ) AS REPLY_COUNT,
+            	        BOARD_CONTENT
+		        FROM BOARD
+		        JOIN MEMBER USING(MEMBER_NO)
+		        WHERE BOARD_CD = 1
+		        AND MEMBER_NO = ?
+		        AND BOARD_ST = 'N'
+		        ORDER BY BOARD_NO DESC
+		    ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key = "selectReviewAll">
+		SELECT BOARD_NO, BOARD_TITLE, BOARD_CONTENT, TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT,
+			   (SELECT IMG_RENAME FROM BOARD_IMG WHERE IMG_LEVEL = 0 AND BOARD_IMG.BOARD_NO = BOARD.BOARD_NO) AS THUMBNAIL,
+			   (SELECT COUNT(*) FROM HEART WHERE BOARD_NO = BOARD.BOARD_NO) AS HEART_COUNT,
+			   (SELECT COUNT(*) FROM REPLY WHERE BOARD_NO = BOARD.BOARD_NO) AS REPLY_COUNT,
+			   (SELECT STORE_NM FROM STORE WHERE STORE_NO = BOARD.STORE_NO) AS STORE_NAME
+		FROM BOARD
+		WHERE BOARD_CD = 1
+		AND BOARD_ST = 'N'
+		AND MEMBER_NO = ?
+	</entry>
+	
+	<entry key = "selectMember">
+		SELECT MEMBER_NO, MEMBER_NICK, MEMBER_IMG, MEMBER_INT
+		FROM MEMBER
+		WHERE MEMBER_NO = ?
+	</entry>
+	
+	<entry key ="findStoreNo">
+		SELECT STORE_NO FROM STORE WHERE MEMBER_NO = ? 
+	</entry>
+	
+	<entry key="selectReviewByStoreNo">
+		SELECT * FROM(
+		    SELECT ROWNUM RNUM, A.* FROM(
+		        SELECT  BOARD_NO, BOARD_TITLE, MEMBER_NICK, MEMBER_IMG, MEMBER_NO,
+		                TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT,
+            	        (SELECT IMG_RENAME FROM BOARD_IMG WHERE IMG_LEVEL = 0
+            	         AND BOARD_IMG.BOARD_NO = BOARD.BOARD_NO) AS THUMBNAIL,
+            	        (SELECT COUNT(*) FROM HEART WHERE BOARD_NO = BOARD.BOARD_NO ) AS HEART_COUNT,
+            	        (SELECT COUNT(*) FROM REPLY WHERE BOARD_NO = BOARD.BOARD_NO ) AS REPLY_COUNT,
+            	        BOARD_CONTENT
+		        FROM BOARD
+		        JOIN MEMBER USING(MEMBER_NO)
+		        WHERE BOARD_CD = 1
+		        AND STORE_NO = ?
+		        AND BOARD_ST = 'N'
+		        ORDER BY BOARD_NO DESC
+		    ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="selectReviewDetail">
+		SELECT BOARD_NO, BOARD_TITLE, BOARD_CONTENT, MEMBER_NICK, TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT,
+			   (SELECT COUNT(*) FROM HEART WHERE BOARD_NO = BOARD.BOARD_NO) AS HEART_COUNT, MEMBER_NO, MEMBER_IMG
+		FROM BOARD
+		JOIN MEMBER USING(MEMBER_NO)
+		WHERE BOARD_CD = 1
+		AND BOARD_ST = 'N'
+		AND BOARD_NO = ? 
+	</entry>
+	
+	<entry key = "selectImage">
+		SELECT * FROM BOARD_IMG
+		WHERE BOARD_NO = ?
+		ORDER BY IMG_LEVEL
+	</entry>
+	
+	<entry key ="deleteReview">
+		UPDATE BOARD SET BOARD_ST = 'Y' WHERE BOARD_NO = ?
+	</entry>
+	
+	<entry key ="findHeart">
+		SELECT COUNT(*) FROM HEART WHERE MEMBER_NO = ? AND BOARD_NO = ?
+	</entry>
+	
+	<entry key ="insertHeart">
+		INSERT INTO HEART VALUES(?, ?)
+	</entry>
+	
+	<entry key ="deleteHeart">
+		DELETE FROM HEART WHERE MEMBER_NO = ? AND BOARD_NO = ?  
+	</entry>
+
+	<entry key ="insertReport">
+		INSERT INTO REPORT
+		VALUES(SEQ_REPORT_NO.NEXTVAL, DEFAULT, DEFAULT, ?, ?, ?, ?)
+	</entry>
+</properties>

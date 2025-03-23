@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 500px 940px;
+    background-color: #FFFAEF;
+}
+/* 왼쪽 */
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    padding-bottom: 400px;
+    padding-top: 100px;
+}
+
+/* 로고 */
+.section1-logo{
+    width: 360px;
+    margin: 40px 0px;
+
+}
+/* 회원관리, 리뷰관리, 댓글관리, 매장관리, 커뮤니티관리*/
+.section1 ul{
+    text-align: center;
+}
+.section1 li{
+    font-size: 30px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    padding: 40px;
+
+}
+.section1 li:hover{
+    background-color: #6B8E8B;
+    cursor: pointer;
+
+}
+.section1 li:nth-of-type(1){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(2){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(3){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(4){
+    border-bottom: 1px solid black;
+}
+.section1 li:nth-of-type(5){
+    border-bottom: 1px solid black;
+}

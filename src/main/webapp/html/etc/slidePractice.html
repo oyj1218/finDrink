@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/slidePractice.css">
+    <script defer src="../js/slidePractice.js"></script>
+    <title>slide</title>
+  </head>
+  <body>
+    <style>
+        .box{
+  margin: 0 auto; /**중앙 정렬한다.**/
+}
+
+/**사진**/
+.slide{ /**이만큼의 크기로 보이겠다는 의미**/
+ /**사진보다 크면 다음 사진까지 표시되어 img와 slide크기를 맞춘다.**/
+  overflow: hidden;/**이미지는 내장이라 overflow:hidden을 사용해 넘친 사진들을 안보이게 한다.**/
+}
+.images{
+  display: flex; /**좌우 슬라이드를 위해 flex로 사진을 가로정렬한다.**/
+  transition: transform 0.5s;
+}
+
+/**버튼위치**/
+.back{
+  position:relative;
+  bottom: 5%; left: 40%;
+}
+.next{
+  position:relative;
+  bottom: 5%; left: 50%;
+}
+
+/**버튼디자인**/
+button{
+  width: 50px; height: 50px;
+  background-color: rgb(200, 239, 255);
+  border-radius: 30px;
+  border : transparent;
+  color:black;
+  cursor: pointer;
+}
+button:active{/**버튼을 클릭하는 동안 색을 바꾼다.**/
+  background-color:#679cff;
+}
+button:disabled{/**버튼 속성이 disabled되면 색을 바꾼다.**/
+    background-color: rgb(200, 239, 255);
+}
+    </style>
+    <div class="box">
+      <h2>image slide</h2>
+<!--div를 두개 감싼이유는 img들을 좌우배치하고 배치된 사진중 한장만 보이게 하기 위해서이다.-->
+      <div class="slide"> <!--배치된 img들을 하나의 img만 보이게 가리기 위한 태그-->
+        <div class="images"> <!--img들을 좌우배치할 태그-->
+            <img src="https://i.pinimg.com/564x/be/04/eb/be04eb7e83aa969db0139989f9d24edd.jpg">
+            <img src="https://i.pinimg.com/736x/41/68/5d/41685d1e8d208fff37482052b31e3fab.jpg">
+            <img src="https://i.pinimg.com/564x/f1/ef/fc/f1effcdd1f032b7ccdb6e3fd2de49de4.jpg">
+        </div>
+      </div>
+      <button class="prevButton">❮</button>
+      <button class="nextButton">❯</button>
+    </div>
+
+
+    <script>
+        let pages = 0;//현재 인덱스 번호
+        let positionValue = 0;//images 위치값
+        const IMAGE_WIDTH = 500;//한번 이동 시 IMAGE_WIDTH만큼 이동한다.
+        //DOM
+        const backBtn = document.querySelector(".prevButton")
+        const nextBtn = document.querySelector(".nextButton")
+        const images = document.querySelector(".images")
+
+        function next() {
+        if (pages< 2) {
+            backBtn.removeAttribute('disabled')//뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
+            positionValue -= IMAGE_WIDTH;//IMAGE_WIDTH의 증감을 positionValue에 저장한다.
+            images.style.transform = `translateX(${positionValue}px)`;
+                //x축으로 positionValue만큼의 px을 이동한다.
+            pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
+        }
+        if (pages === 2) { //
+            nextBtn.setAttribute('disabled', 'true')//마지막 장일 때 next버튼이 disabled된다.
+        }
+        }
+
+        function back() {
+        if (pages > 0) {
+            nextBtn.removeAttribute('disabled')
+            positionValue += IMAGE_WIDTH;
+            images.style.transform = `translateX(${positionValue}px)`;
+            pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
+        }
+        if (pages === 0) {
+            backBtn.setAttribute('disabled', 'true')//마지막 장일 때 back버튼이 disabled된다.
+        }
+        }
+
+        function init() {  //초기 화면 상태
+        backBtn.setAttribute('disabled', 'true'); //속성이 disabled가 된다.
+        backBtn.addEventListener("click", back); //클릭시 다음으로 이동한다.
+        nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
+        }
+init();
+    </script>
+    </body>
+  </html>

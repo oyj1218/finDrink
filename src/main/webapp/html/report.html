@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report</title>
+    <link rel="stylesheet" href="../resources/css/report.css">
+
+    <script src="https://kit.fontawesome.com/f4e088b372.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="layerPopup">
+        <label for="layerPopup">
+            <!-- 신고 -->
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </label>
+        <div id="layer_bg">
+            <div id="popup">
+                <h2>신고하기
+                    <label for="layerPopup">✖</label>
+                </h2>
+                <hr>
+                <br>
+
+                <h3>* 신고하려는 이유를 선택해주세요.</h3>
+                
+                <form action="#" class="report-list">
+                    <div>
+                        <label>
+                            <input type="radio" style="width: 20px; height: 20px;" name="list" id="spam" value="spam">
+                            <span>스팸 홍보 및 도배</span>
+                        </label>
+                    </div>
+                   
+                    <div>
+                        <label>
+                            <input type="radio" style="width: 20px; height: 20px;" name="list" id="porno" value="porno">
+                            <span>음란물 작성</span>
+                        </label>  
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="radio" style="width: 20px; height: 20px;" name="list" id="curse" value="curse">
+                            <span>욕설 및 혐오 표현 작성</span>
+                        </label> 
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="radio" style="width: 20px; height: 20px;" name="list" id="slander" value="slander">
+                            <span>회원 비방</span>
+                        </label> 
+                    </div>
+
+                    <div class="report-btn-area">
+                        <button id="report-btn">신고하기</button>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

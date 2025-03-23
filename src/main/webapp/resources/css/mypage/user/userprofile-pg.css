@@ -1,0 +1,58 @@
+.profile-img-area{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+
+    position: relative;
+    /* background-color: red; */
+}
+
+#profile-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-btn-area{
+    width: 230px;
+    height: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+
+#input-image{
+    display: none;
+}
+
+.profile-btn-area > *{
+    width: 110px;
+    height: 33px;
+    /* padding: 6px 10px; */
+    border: 1px solid black;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-btn-area > label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.profile-btn-area > button{
+    background-color: blueviolet;
+    color: white;
+    border: 0;
+}
+
+#delete-image{
+    position: absolute;
+    cursor: pointer;
+}

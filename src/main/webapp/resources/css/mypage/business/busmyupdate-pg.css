@@ -1,0 +1,124 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 500px 940px;
+    background-color: #FFFAEF;
+}
+
+body {
+    position: relative;
+}
+
+body:before {
+    content: "";
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    background-repeat: repeat-y;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+}
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+
+
+/* 회원정보 */
+.main-3 {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 450px;
+}
+
+/* 회원가입 입력칸 */
+.main-input{
+    width: 750px;
+    border: transparent;
+    border-bottom: 1px dashed black;
+    background-color: transparent;
+    margin-left: 190px;
+    padding: 20px 50px 20px 10px;
+    font-family: "Wanted Sans";
+    margin-bottom: 20px;
+    font-size: 20px;
+    outline: none;
+
+}
+input[type='file']{
+    display: block;
+    width: 0;
+    height: 0;
+}
+.main-3 label{
+    margin-left: 190px;
+    border-bottom: 1px dashed black;
+}
+.img-upload {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    padding: 16px 10px;
+    &:hover {
+      background-color:#acbdbc;
+    }
+  }
+  
+#upload-btn {
+    display: none;
+}
+
+.profile-submit-area{
+    margin-left: 200px;
+    margin-top: 74px;
+    display: flex;
+    
+}
+.profile-image{
+    width: 300px;
+    height: auto;
+    padding-bottom: 100px;
+}
+.submit-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    margin: 40px 30px 40px 200px;
+    background-color: transparent;
+    border: none;
+    align-items: end;
+}
+
+.submit-btn:hover{
+    color:#acbdbc;
+}

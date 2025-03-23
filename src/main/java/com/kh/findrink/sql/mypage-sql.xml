@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>mypage-sql.xml</comment>
+	
+	<entry key = "passwordCheck" >
+		SELECT COUNT(*) FROM MEMBER WHERE MEMBER_ID = ? AND MEMBER_PW = ?
+	</entry>
+
+	<entry key = "memberInfoUpdate">
+		UPDATE MEMBER SET
+		MEMBER_IMG = ?,
+		MEMBER_PW =?,
+		MEMBER_TEL = ?,
+		MEMBER_NICK = ?,
+		MEMBER_EMAIL = ?,
+		MEMBER_INT = ?,
+		SALT = ?
+		WHERE MEMBER_NO = ?
+	</entry>
+	
+</properties>

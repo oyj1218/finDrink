@@ -1,0 +1,142 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+/* 헤더(header) */
+header{
+    position: sticky;
+    top:0;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    z-index: 10;
+
+
+}
+header section{
+    background-color: #6B8E8B;
+    border-bottom: 1px solid #47615f;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    /* height: 80px; */
+    display:grid;
+    grid-template-columns: 0.3fr 1.5fr 0.6fr;
+    
+}
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+header li{
+    list-style: none;
+}
+/* 로고 */
+.header-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-left img{
+    width: 30px;
+}
+.header-left img:hover{
+    width: 30px;
+    cursor: pointer;
+}
+/* 네비바(리뷰, 추천, 랭킹, 커뮤니티 */
+.header-middle{
+    display:flex;
+    justify-content: end;
+}
+.header-middle li{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-middle a{
+    padding: 10px 24px;
+    margin: 0px 30px;
+}
+.header-middle a:hover{
+    background-color: #3C7E77;
+    
+}
+/* 로그인, 회원가입 */
+.header-right{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+#id-pw-area, #mypage-logout-area{
+    border: transparent;
+    display: flex;
+}
+
+.login-pg, .signup-pg, .logout-btn, .mypage-pg{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 40px;
+    
+}
+
+.login-pg, .mypage-pg{
+    background-color: white;
+}
+.signup-pg, .logout-btn{
+    background-color: black;
+    color:white;
+}
+.login-pg:hover, .signup-pg:hover, .logout-btn:hover, .mypage-pg:hover{
+    background-color: #3C7E77;
+    
+}
+/* footer */
+footer{
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    background-color: #BFB195;
+    width:1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 2fr 0.6fr 0.4fr 0.2fr;
+    align-items: center;
+    position: relative;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+.footer-1{
+    width: 600px;
+    margin-left: 470px;
+    margin-right: auto;
+}
+.footer-2{
+    margin-left: 100px;
+}
+.footer-2, .footer-3, .footer-4{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer-2 a{
+    margin: 10px;
+    font-size: 30px;
+}
+.footer-3{
+    font-size: 50px;
+}
+.footer-4{
+    font-size: 30px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}

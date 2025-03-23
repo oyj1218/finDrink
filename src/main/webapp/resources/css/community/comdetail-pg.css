@@ -1,0 +1,345 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFAEF;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+body {
+    position: relative;
+}
+body:before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+} 
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+} 
+/* 메인 */
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFAEF;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+/* 커뮤니티 | community */
+.section1{
+    border-bottom: 1px solid black;
+}
+.section1 h1{
+    padding: 100px 0px 30px 20px;
+    font-size: 40px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    margin-left: 120px;
+
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+}
+/* 매장 추천 */
+.section2-context{
+    font-size: 26px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    background-color: transparent;
+    border: transparent;
+    width: 150px;
+    margin-left: 120px;
+    padding: 30px 0px 30px 20px;
+
+}
+
+/* 제목 | TITLE */
+.main-title{
+    width: 750px;
+    border: transparent;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    padding: 30px 0px 30px 20px;
+    font-family: "Wanted Sans";
+    margin: 0px 50px 0px 120px;
+    font-size: 20px;
+
+}
+/* 본문 텍스트 폼 */
+.section2 form{
+    margin: 50px 50px 0px 120px;
+    padding: 30px 0px 30px 20px;
+    overflow: scroll;
+    font-size: 20px;
+    font-family: "Wanted Sans";
+    height: 300px;
+    width: 1100px;
+    border: 1px solid rgb(180, 180, 180);
+}
+#heart-icon{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+/* 업데이트, 삭제, 등록일, 신고 버튼 합친 것 */
+.section2-btn{
+    display: flex;
+    justify-content: end;
+    margin: 60px 80px;
+    align-items: center;
+    font-family: "Wanted Sans";
+    
+}
+
+.section2-enrolldate, .section3-enrolltime{
+    font-size: 24px;
+    font-family: "Wanted Sans";
+}
+/* 신고버튼 */
+.fa-triangle-exclamation{
+    margin: 6px 70px 0px 40px;
+    font-size: 20px;
+}
+.section2-btn p{
+    margin: 0px 20px;
+}
+.report-btn{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+
+}
+
+/* 등록 버튼, 업데이트 버튼, 삭제 버튼 */
+.add-btn, .update-btn, .delete-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    padding: 0px 40px;
+    background-color: transparent;
+    border: transparent
+
+}
+
+.add-btn:hover, .update-btn:hover, .delete-btn:hover{
+    color:#acbdbc;
+}
+
+/* 댓글 */
+.section3{
+    margin-left: 120px;
+    padding-bottom: 30px;    
+}
+
+
+/* 이용자 정보 */
+.section3-review{
+    display: grid;
+    grid-template-columns: 0.5fr 5fr;
+    margin-top: 40px;
+    margin-right: 250px;
+    border-bottom: 1px solid black;
+
+}
+/* 홍길동, 내용, 등록일 */
+.section3-writer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+
+}
+
+.section3-writer *{
+    padding: 10px 0px;
+}
+
+.section3-writer > h2{
+    font-size: 24px;
+    font-family: "Wanted Sans";
+}
+/* 등록일, 신고버튼 합친 것*/
+.section3-btn{
+    display: flex;
+    align-items: first baseline;
+}
+/* 등록일 */
+.section3-enrolltime{
+    margin-bottom: 50px;
+}
+
+
+/* 이용자 로고 */
+.section3-review img{
+    width: 90px;
+    
+}
+/* 홍길동, 별점 */
+
+
+
+/* 매장리뷰 가게 사진, 내용 */
+.section3-context{
+    display: flex;
+    margin: 40px 110px;
+}
+/* 리뷰내용 */
+.section3-context p{
+    margin-left: 30px;
+}
+
+/* return 버튼 합친 것 */
+.section4 div{
+    /* display: flex;
+    justify-content: center; */
+}
+/* return 버튼 */
+.return-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    padding: 20px 40px;
+    background-color: transparent;
+    border: transparent;
+    margin: 40px 0px 60px 850px;
+
+}
+.return-btn:hover{
+    color:#acbdbc;
+}
+.section3-btn span{
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* 업로드 이미지 */
+.upload-h5{
+    font-size: 18px;
+    font-family: "Wanted Sans";
+    margin: 60px 0px 0px 120px;
+}
+
+.img-box{
+    margin: 50px 50px 0px 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-box h5{
+    font-size: 18px;
+    font-family: "Wanted Sans";
+    margin: 20px 0px;
+}
+.boardImg img{
+    width:300px;
+    height: 400px;
+}
+
+/* 댓글 등록 */
+.reply-insert-area{
+    display: flex;
+    flex-direction: column;
+}
+.reply-insert-area > textarea{
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    border: 1px dashed black;
+    outline: none;
+    width: 1180px;
+    margin: 40px 100px 0px 150px;
+    height: 120px;
+    overflow: overlay;
+    font-size: 24px;
+    font-family: "Wanted Sans";
+    padding: 18px;
+
+}
+.insert-btn{
+    display: flex;
+    justify-content: end;
+    margin-right: 90px;
+    cursor: pointer;
+    margin-top: 50px;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    background-color: transparent;
+    border: transparent;
+}
+
+/* 댓글, 좋아요 */
+.section3-like{
+    font-size: 40px;
+    margin: 40px 60px 30px 0px;
+    display: flex;
+    justify-content: end;
+}
+
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* letter-spacing: -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    font-weight: bold;
+}
+.pagination:hover .current:hover{
+    background-color:#acbdbc;
+}

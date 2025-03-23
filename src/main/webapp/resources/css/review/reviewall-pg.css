@@ -1,0 +1,211 @@
+
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+body:before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/450004/pexels-photo-450004.jpeg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+}
+container {
+    position: relative;
+    background-color: #fffaef;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+}
+
+
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 30%);
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFAEF;
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main li{
+    list-style: none;
+}
+/* 매장 리뷰 | store review */
+.section1{
+    border-bottom: 1px solid black;
+}
+.section1 h1{
+    padding: 100px 0px 30px 20px;
+    font-size: 40px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    margin-left: 120px;
+
+}
+
+/* 프로필이미지, 유저이름, 가게사진, 리뷰 등 합친 것 */
+.section2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 1200px;
+}
+
+.section2-review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 30px 0px;
+}
+
+/* 프로필이미지, 홍길동 */
+.section2-writer{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* 이용자 로고 */
+.section2-profile{
+    /* padding-right: 20px; */
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* 유저이름(홍길동) */
+.section2-name{
+    font-size: 24px;
+    font-family: "Wanted Sans";
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+/* 매장사진 */
+.section2-store{
+    width: 220px;
+
+}
+/* 리뷰내용 */
+.section2-context{
+    padding: 20px;
+    overflow: hidden;
+    height: 60px;
+    font-size: 16px;
+    font-family: "Wanted Sans";
+}
+
+
+
+/* 업데이트 버튼, 삭제 버튼 */
+.update-btn, .delete-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    /* font-weight: bold; */
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+    margin-top: 20px;
+
+}
+
+.update-btn:hover, .delete-btn:hover{
+    color:#acbdbc;
+}
+.delete-btn{
+    margin-right: 14px;
+}
+
+.section2-text{
+    font-size: 14px;
+}
+/* 등록일 */
+.section2-enrolltime{
+    margin-bottom: 50px;
+    padding: 20px;
+    font-size: 12px;
+    font-family: "Wanted Sans";
+}
+
+/* 신고버튼 */
+.fa-triangle-exclamation{
+}
+.report-btn{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    margin: 24px 14px;
+
+}
+
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* letter-spacing: -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    font-weight: bold;
+}
+.pagination:hover .current:hover{
+    background-color:#acbdbc;
+}
+
+
+/* 등록버튼 add버튼 */
+.add-btn{
+    cursor: pointer;
+    font-family: "Courgette";
+    font-weight: bold;
+    font-size: 26px;
+    display: inline-block;
+    justify-content: end;
+    padding: 10px 10px;
+    margin: 0px 0px 30px 1200px;
+    background: transparent;
+    border: transparent;
+
+}
+.add-btn:hover{
+   color:#acbdbc;
+}

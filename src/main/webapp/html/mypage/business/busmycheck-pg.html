@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>businesscheck</title>
+
+    <link rel="stylesheet" href="../resources/css/mycheck-pg.css" />
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+</head>
+<body>
+    <container>
+        
+        <main>
+            <section class="section1 rellax" data-rellax-speed="-5">
+                <img id="section1-logo" class="section1-logo" src="../resources/images/findrink.png" alt="">
+                <img id="section1-profile" class="section1-profile" 
+                src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small_2x/user-icon-on-transparent-background-free-png.png" alt="">
+                <ul>
+                    <li>내 정보</li>
+                    <li>리뷰조회</li>
+                    <li>매장관리</li>
+                    <li>로그아웃</li>
+                </ul>
+            </section>
+            <section class="section2 rellax" data-rellax-speed="1">
+                <h1 class="section2-h1-user">사업자 _님, 반갑습니다</h1>
+                <div class="main-3">
+                    <input type="text" class="main-input" name="id" id="id" placeholder="아이디 | ID">
+                    <input type="text" class="main-input" name="password" id="password" placeholder="비밀번호 | PASSWORD">
+                    <input type="text" class="main-input" name="name" id="name" placeholder="이름 | NAME">
+                    <input type="text" class="main-input" name="phone" id="phone" placeholder="전화번호 | PHONE">
+                    <input type="text" class="main-input" name="nickname" id="nickname" placeholder="닉네임 | NICKNAME">
+                    <input type="text" class="main-input" name="email" id="email" placeholder="이메일 | EMAIL">
+                    <input type="text" class="main-input" name="intro" id="intro" placeholder="한 줄 소개 | INTRO">
+                </div>
+                <a href="#" class="update-btn">update</a>
+            </section>
+        </main>
+    </container>
+
+    <script src="../resources/js/tool/typeit.js"></script>
+    <script src="../resources/js/tool/rellax.js"></script>
+
+</body>
+</html>

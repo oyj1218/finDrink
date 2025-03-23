@@ -1,0 +1,209 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main, .section1, .section2, .section3{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 메인(main) */
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 60%);
+    padding-bottom: 100px;    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 5fr;
+}
+
+.main-1{
+    border-bottom: 1px solid black;
+    font-size: 24px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    padding-top: 100px;
+    padding-left: 40px;
+}
+
+.main-2{
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* range */
+input[type="range"]{ 
+    width: 800px;
+    accent-color: #3C7E77;
+}
+
+datalist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 830px;
+    }
+
+datalist > option{
+    font-family: "Wanted Sans";
+    font-weight: bold;
+}
+
+/* 키워드 버튼 */
+.keyWord{
+    appearance: none;
+    height: 60px;
+    padding: 5px;
+    width: 150px;
+    margin: 0 5px;
+
+    box-shadow: 0 0 5px #616464;
+    background-color: transparent;
+    border-radius: 15px;
+
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.keyWord:after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    content: attr(data-name);
+    font-family: "Wanted Sans";
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.keyWord:checked{
+    background-color: #3C7E77;
+}
+
+/* 추천 버튼 */
+
+#recommend-btn{
+    width: 70px;
+    height: 40px;
+    font-family: "Wanted Sans";
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid #3C7E77;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: transparent;
+    transition-duration: 0.5s;
+}
+
+#recommend-btn:hover{
+    background-color: #3C7E77;
+    color: #ddd;
+}
+
+
+/* select 영역 */
+.list-btn>select{
+    appearance: none;
+    width: 70px;
+    height: 30px;
+    background-color: transparent;
+    text-align: center;
+    font-family: "Wanted Sans";
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    outline: none;
+}
+
+.list-btn>select:hover{
+    background-color: #e2ddd3;
+}
+
+.list-btn>select>option{
+    font-weight: bold;
+}
+
+
+
+/* 맨 아래 영역 */
+.main-3{
+    overflow: hidden;
+}
+
+.list-btn{
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+}
+
+.list-btn option{
+    font-family: "Wanted Sans";
+}
+
+.list-img{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    user-select: auto;
+    cursor: pointer;
+}
+
+.list-img::-webkit-scrollbar{
+    display: none;
+}
+
+.list-img.active{
+    cursor: grabbing;
+}
+
+.list-img>div{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+/* 이미지 */
+.list-img img{
+    width: 300px;
+    height: 400px;
+    -webkit-user-drag: none;
+}
+
+/* 이미지 아래 텍스트 */
+.list-img p:nth-of-type(1){
+    font-weight: bold;
+    font-family: "Wanted Sans";
+    font-size: 24px;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    padding-top: 5px;
+    -webkit-user-drag: none;
+}
+
+.list-img p:nth-of-type(2){
+    font-family: "Wanted Sans";
+    font-size: 18px;
+    margin-top: 5px;
+    -webkit-user-drag: none;
+}
+
+
+
+
+
+
+
+

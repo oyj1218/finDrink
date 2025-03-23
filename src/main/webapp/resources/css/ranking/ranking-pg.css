@@ -1,0 +1,112 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main, .section1, .section2, .section3{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #acbdbc, #FFFAEF 60%);
+    padding-bottom: 100px;    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    overflow-y: auto;
+}
+
+/* 메인 부분 스크롤 숨김 */
+main::-webkit-scrollbar{
+    display: none;
+}
+
+/* 매장 랭킹 | STORE RANKING 영역 */
+.main-1{
+    font-size: 24px;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    padding-top: 100px;
+    padding-left: 40px;
+    border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+.main-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
+}
+
+.main-2-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgb(120, 120, 120);
+    border-right: 1px solid rgb(120, 120, 120);
+}
+
+.main-2-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+/* 이미지 상단 텍스트(숫자 + 별점 + 매장명) 영역 */
+.ranking-list-title{
+    padding: 10px 10px 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid black;
+}
+
+.ranking-list-title>div{
+    margin-right: 15px;
+}
+
+.ranking-list-title>div:nth-of-type(1){
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    font-family: "Wanted Sans";
+    font-weight: bold;
+}
+
+.ranking-list-title>div:nth-of-type(2){
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.ranking-list-title>div:nth-of-type(3){
+    font-family: "Wanted Sans";
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 이미지 */
+.img-box{
+    overflow: hidden;
+    margin: 8px;
+}
+
+.img-box a img{
+    width: 300px;
+    height: 400px;
+    transition-duration: 1s;
+}
+
+.img-box a img:hover{
+    transform: scale(1.5);
+}
